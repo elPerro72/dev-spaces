@@ -19,7 +19,7 @@ public class Application {
         conn.setRequestProperty("azds-route-as", azdsRouteAs); // propagate dev space routing header
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream())))
         {
-            return "Hello from webfrontend and " + reader.lines().reduce("\n", String::concat);
+            return "Hello Bert from webfrontend and " + reader.lines().reduce("\n", String::concat);
         }
     }
 }
